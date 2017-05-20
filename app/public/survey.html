@@ -6,7 +6,11 @@
 
 	<!--Latest compiled and minified CSS & JS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!--Linking CSS Stylesheet-->
+	<link rel = "stylesheet" type="text/css" href="style.css">
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"></link>
 
@@ -27,13 +31,13 @@
 			<input type="text" name"" id="name" class="form-control" required=>
 
 
-			<h4>Link to Photo Image (Required)</h4>
+			<h4>Link to Photo Image (Required...Picture in your favorite outfit!)</h4>
 			<input type="text" name="" id="photo" class="form-control" required>
 
 			<hr>
 
 			<h3><strong>Question 1 </strong></h3>
-			<h4>Chivalry is dead.</h4>
+			<h4>I like to be photo ready at all times.</h4>
 			<select data-placeholder="" class="chosen-select" id="q1">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -45,7 +49,7 @@
 
 
 			<h3><strong>Question 2 </strong></h3>
-			<h4>I consider myself an optimist.</h4>
+			<h4>A LBT is always my go-to when I'm in a pinch.</h4>
 			<select data-placeholder="" class="chosen-select" id="q2">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -58,7 +62,7 @@
 
 
 			<h3><strong>Question 3 </strong></h3>
-			<h4>I consider myself an optimist.</h4>
+			<h4>A classic tee, leggings, and chucks are my fav.</h4>
 			<select data-placeholder="" class="chosen-select" id="q3">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -70,7 +74,7 @@
 
 
 			<h3><strong>Question 4 </strong></h3>
-			<h4>I watch cartoons when I need to decompress.</h4>
+			<h4>Accessories matter.</h4>
 			<select data-placeholder="" class="chosen-select" id="q4">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -82,7 +86,7 @@
 
 
 			<h3><strong>Question 5 </strong></h3>
-			<h4>I consider a romantic date playing board games and eating ice cream.</h4>
+			<h4>My closet is monochromatic.</h4>
 			<select data-placeholder="" class="chosen-select" id="q5">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -94,7 +98,7 @@
 
 
 	<h3><strong>Question 6 </strong></h3>
-			<h4>I listen to Beyonce when I cook.</h4>
+			<h4>My concept of style is "anything I don't have to iron."</h4>
 			<select data-placeholder="" class="chosen-select" id="q6">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -106,7 +110,7 @@
 
 	
 	<h3><strong>Question 7 </strong></h3>
-			<h4>Facebook stalking is my favorite pastime.</h4>
+			<h4>Pinterest is my best friend when it comes to finding what's "trendy".</h4>
 			<select data-placeholder="" class="chosen-select" id="q7">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -118,7 +122,7 @@
 
 
 	<h3><strong>Question 8 </strong></h3>
-			<h4>I can eat sushi everyday of the week.</h4>
+			<h4>I like to go from day to night in the same outfit.</h4>
 			<select data-placeholder="" class="chosen-select" id="q8">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -130,7 +134,7 @@
 
 
 	<h3><strong>Question 9 </strong></h3>
-			<h4>Investing money is important to me.</h4>
+			<h4>I will invest money in good jeans.</h4>
 			<select data-placeholder="" class="chosen-select" id="q9">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -141,7 +145,7 @@
 	</select>
 
 	<h3><strong>Question 10 </strong></h3>
-			<h4>I value spending time with my family.</h4>
+			<h4>I match my clothes at night before I go to bed. </h4>
 			<select data-placeholder="" class="chosen-select" id="q10">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -155,12 +159,13 @@
 		<br>
 
 		<!--Submit button-->
-		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" area-hidden="true"></i> Submit </button>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="glyphicon glyphicon-credit-card" area-hidden="true"></i> Submit </button>
 
 		<hr>
 		<footer class="footer">
 			<div class="container">
-					<p><a href= "/api/friends"> API Friends List</a> | <a href="https://github.com/CToliver12/Friend-Finder">Github Repo</a></p>
+				<div class="text-center">
+					<p><a href= "/api/friends"> API Outfit Details</a> | <a href="https://github.com/CToliver12/Friend-Finder">Github Repo</a></p>
 			</div>
 		</footer>
 
@@ -178,7 +183,7 @@
 			</div>
 			<div class="modal-body">
 			<h2 id="matchName"></h2>
-			<img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+			<img id="matchImg" src="" alt="">
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -203,7 +208,7 @@
 		$(selector).chosen(config[selector]);
 	}//end of var selector
 
-	//Caputre the form inputs/click event 
+	//Capture the form inputs/click event 
 	$("#submit").on("click", function(){
 
 		//Form validation
@@ -233,17 +238,22 @@
 							$("#q6").val(), $("q7").val(), $("q8").val(), $("q9").val(), $("q10").val(),] 
 		}
 
+
+
 		//Grab the URL from the website 
-		var currentURL = window.location.orgin;	
+		var currentURL = window.location.orgin; 
+		console.log(currentURL);
+	
 
 		//AJAX post the data to the friends API
-		$.post(currentURL + "api/friends", userData,
+		$.post("../data/friends.js", userData,
 			function(data){
-
+				console.log(currentURL + "../data/friends.js");
+	
 				//Grab the result from the AJAX post so that the best match's name and photo are displayed 
 
 				//Most compatilble friend name 
-				$("matchName").text(data.name);
+				$("#matchName").text(data.name);
 
 				//Most compatible friend photo 
 				$('#matchImg').attr("src", data.photo);
@@ -279,11 +289,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-

@@ -3,9 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>FriendFinder</title>
-	
+
+	<!--Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+	
+	<!--Linking CSS Stylesheet-->
+	<link rel = "stylesheet" type="text/css" href="style.css">
+
+	<!--fontawesome -->
+	<script src="https://use.fontawesome.com/0bf9ac1b8c.js"></script>
+
+	<!--jQuery Reference --> 
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!--Latest complied and minified javascript--> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"></link>
 
@@ -14,22 +25,26 @@
 	
 		<!-- Welcome Jumbotron -->
 		<div class="container">
+			
 			<div class= "jumbotron">
-			<h1 class=""><i class="fa fa-facebook" aria-hidden="true"></i>Friend Finder</h1>
+			<!--<span class=glyphicon glyphicon-link"></span>-->
+			<h1 class="text-center"><i class="fa fa-tags" aria-hidden="true"></i>Let's find the perfect outfit!</h1>
 			<hr>
-			<h2 class=""> Answer a few basic questions.</h2>
-			<h2 class="">Find new friends based on our comprehensive personality test!</h2>
+			<h2 class="text-center"> Answer a few basic questions.</h2>
+			<h2 class="text-center">Find the outfit that best suits you based on our comprehensive dress test!</h2>
 			<br>
 
-		<div class="">
-			<a href="/survey" class="btn btn-lg btn-primary" role="button"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey </h4></button></a>
+		<div class="text-center">
+			<a href="/survey" class="btn btn-lg btn-primary" role="button"><h4><span class="glyphicon glyphicon-credit-card"></span> Take our dress test </h4></button></a>
 		</div>
 	</div>
 
 
 			<footer class="footer">
+
 				<div class="container">
-					<p><a href="/api/friends"> API Friends List</a> | <a href="https://github.com/CToliver12/Friend-Finder">GitHub Repo</a></p>
+				<div class="text-center">
+					<p><a href="../data/friends.js"> API Outfit Details</a> | <a href="https://github.com/CToliver12/Friend-Finder">GitHub Repo</a></p>
 				</div>
 				</footer>
 

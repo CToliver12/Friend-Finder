@@ -12,7 +12,7 @@ module.exports = function(app){
 	//In each of the below cases when a user visits a link 
 	//(ex. localhost: PORT/api/admin... user is shown a JSON of the data in the table)
 
-	app.get("/api/friends", function(req,res) {
+	app.get("app/data/friends.js", function(req,res) {
 		res.json(userData);
 	});
 
@@ -27,7 +27,7 @@ module.exports = function(app){
 	//Adds new user to userData array.
 	//=================================================================
 
-	app.post("/api/friends", function(req,res) {
+	app.post("app/data/friends.js", function(req,res) {
 
 		//Store current user scores in array
 		var currentUserScores = req.body.scores;
