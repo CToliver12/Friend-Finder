@@ -6,7 +6,7 @@
 
 	<!--Latest compiled and minified CSS & JS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
 
     <!--Linking CSS Stylesheet-->
 	<link rel = "stylesheet" type="text/css" href="style.css">
@@ -49,7 +49,7 @@
 
 
 			<h3><strong>Question 2 </strong></h3>
-			<h4>A LBT is always my go-to when I'm in a pinch.</h4>
+			<h4>A LBD is always my go-to when I'm in a pinch.</h4>
 			<select data-placeholder="" class="chosen-select" id="q2">
 				<option value=""></option>
 		<option value="1">1 (Stongly Disagree)</option>
@@ -214,14 +214,16 @@
 		//Form validation
 		function validateForm() {
 			var isValid = true;
-			$('.form-control').each(function(){
-				if( $(this).val() === '' )
+			$(".form-control").each(function(){
+				if($(this).val() === "") {
 					isValid = false;
+				}
 			});
 
-			$('.chosen-select').each(function(){
-				if( $(this).val() === "")
+			$(".chosen-select").each(function() {
+				if( $(this).val() === ""){
 						isValid = false
+				}
 			})
 			return isValid;
 		}
@@ -232,23 +234,24 @@
 
 			//Create an opject for the user's data 
 		var userData = {
-				name: $("#name").val(),
-				photo: $("#photo").val(),
-				scores: [$("#q1").val(), $("q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), 
-							$("#q6").val(), $("q7").val(), $("q8").val(), $("q9").val(), $("q10").val(),] 
-		}
+						name: $("#name").val(),
+						photo: $("#photo").val(),
+						scores: [$("#q1").val(), $("q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), 
+									$("#q6").val(), $("q7").val(), $("q8").val(), $("q9").val(), $("q10").val(),
+								] 
+						};
 
 
 
 		//Grab the URL from the website 
 		var currentURL = window.location.orgin; 
-		console.log(currentURL);
+	
 	
 
 		//AJAX post the data to the friends API
-		$.post("../data/friends.js", userData,
+		$.post("/api/friends", userData,
 			function(data){
-				console.log(currentURL + "../data/friends.js");
+				
 	
 				//Grab the result from the AJAX post so that the best match's name and photo are displayed 
 
@@ -260,6 +263,7 @@
 
 				//She the modal wiht the best match 
 				$("#resultsModal").modal('toggle');
+		
 
 				//Clear the form when submitting
 				$("#name").val("");

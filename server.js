@@ -12,11 +12,13 @@ var PORT = process.env.PORT || 8080; //sets initial port/used in listener
 
 //Sets up Express app to handle data parsing 
 //=========================================================================
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type: "application/vnd.api+json"}));
-app.use(express.static('public'));
+app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+app.use(bodyParser.text({ type: 'text/html' }))
+//app.use(bodyParser.text());
+//app.use(bodyParser.json({type: "application/vnd.api+json"}));
+app.use(express.static('app/public'));
 
 //Router
 //below points ever to a series of "route" files 
