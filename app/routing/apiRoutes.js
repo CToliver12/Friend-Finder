@@ -31,13 +31,13 @@ module.exports = function(app){
 			friendDifference: 1000
 		};
 
-		console.log(req.body);
+		//console.log(req.body);
 
 		//Result of the user's survey POST and parse info 
 		var userData = req.body;
 		var userScores = userData.scores;
 
-		console.log(userScores);
+		//console.log(userScores);
 
 		//This variable will calculate the difference between the user's scores and the scores of each user in the database 
 		var comparisonUserTotalScore = 0;

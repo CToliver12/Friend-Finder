@@ -197,12 +197,19 @@
 
 		//Chosen CSS 
 	var config = {
-		'.chosen-select'			:{},
-		'.chosen-select-deselect'	:{allow_single_deselect:true},
-		'.chosen-select-no-single'	:{disable_search_threshold:10},
-		'.chosen-select-no-results'	:{no_results_text:'Oops, nothing found!'},
-		'.chosen-select-width'		:{width: "95%"}
-	}//end of config
+		'.chosen-select':{},
+		'.chosen-select-deselect'	:{
+			allow_single_deselect: true
+		},
+		'.chosen-select-no-single':{
+			disable_search_threshold:10
+		},
+		'.chosen-select-no-results':{
+			no_results_text:'Oops, nothing found!'
+		},
+		'.chosen-select-width':{
+			width: "95%"}
+	};//end of config
 
 	for(var selector in config) {
 		$(selector).chosen(config[selector]);
@@ -210,6 +217,7 @@
 
 	//Capture the form inputs/click event 
 	$("#submit").on("click", function(){
+		event.preventDefault(); 
 
 		//Form validation
 		function validateForm() {
@@ -229,8 +237,7 @@
 		}
 
 		//If all required fields are filled
-		if(validateForm() == true)
-		{
+		if(validateForm()){
 
 			//Create an opject for the user's data 
 		var userData = {

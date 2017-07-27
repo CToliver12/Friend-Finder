@@ -50,7 +50,41 @@ var friends = [
 			"3",
 			"2"
 		]
+	}, 
+	{
+		"name": "Tank Dress/ Denim Jacket/ Flip Flop/ Super Duper Sunglasses/ Leather Shoulder Bag",
+		"photo": "http://mrscasual.com/wp-content/uploads/2017/06/tank-dress-and-denim-jacket-outfit.png",
+		"scores": [
+			  "5", 
+			  "2",
+			  "5",
+			  "3",
+			  "4",
+			  "2",
+			  "1",
+			  "3",
+			  "4",
+			  "2",
+		]
+	},
+	{	
+		"name": "Gromet Lace Up Tee/ Ripped Ankle Skinny Jeans/ Leopard Print Pouch/ Slide Sandal/ Crystal Drop Earrings",
+		"photo": "https://170213-images.liketoknow.it/a01f74c0-4b1d-11e7-9fed-0242ac110002?w=405",
+		"scores":[
+			"3",
+			"2",
+			"2",
+			"5",
+			"4",
+			"2",
+			"1",
+			"4",
+			"5",
+			"3",
+		]
+
 	}
+
 ];
 
 //Notes how we export the array.  This makes it accessible to other files using require 
