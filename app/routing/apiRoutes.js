@@ -24,53 +24,22 @@ module.exports = function(app){
 	//=================================================================
 
 	app.post("/api/friends", function(req,res) {
+		var newResults = (req.body['scores']).map(Number); 
+		var totalDifference = 100;
+		var friendIndex; 
+		for (var i = 0; i <friends.length; i++){
+			var firendResults = friends[i]['scores'];
 
-		var bestMatch = {
-			name: "",
-			photo: "",
-			friendDifference: 1000
-		};
-
-		//console.log(req.body);
-
-		//Result of the user's survey POST and parse info 
-		var userData = req.body;
-		var userScores = userData.scores;
-
-		//console.log(userScores);
-
-		//This variable will calculate the difference between the user's scores and the scores of each user in the database 
-		var comparisonUserTotalScore = 0;
-
-
-		//Determine the user's most compatible friend/looping through the database possibilities 
-		for(var i = 0; i < friends.length; i++) {
-
-			console.log(friends[i]);
-			comparisonUserTotalScore = 0;
-
-
-		//Next, loop through scores of each friend 
-		for(var j = 0; j <friends[i].scores[j]; j++) {
-
-		//Calculate the difference b/w scores and sub them into comparisonUserTotalScore
-		comparisonUserTotalScore +=Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
-
-			//if the sum of the difference between the scores and the sum them into the comparisonUserTotalScore
-			if (comparisonUserTotalScore += bestMatch.friendDifference) {
-
-				//bestMatch new friend reset
-				bestMatch.name = friends[i].name;
-				bestMatch.photo = friends[i].photo;
-				bestMatch.friendDifference = comparisonUserTotalScore;
-			} 
+			var tempDifference = 0;
+			for(var j=0; j< newResults.length; j++){
+				tempDifference += Math.abs(newResults[j]-firendResults[j]);
+			}
+			if (tempDifference < totalDifference) {
+				totalDifference = tempDifference;
+				friendIndex = i; 
+			}
 		}
-	}
-			
-			//user's info saved to the database 
-			friends.push(userData);
-
-			//return JSON with the user's bestMatch.
-			res.json(bestMatch);
-		})
-	};
+		res.json(friends[friendIndex]);
+		friends.push(req.body); 
+	}); 
+}; 
