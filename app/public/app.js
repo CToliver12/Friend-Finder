@@ -3,9 +3,12 @@ $(document).ready(function(){
 	$(".modal").modal();
 });
 
+//Capture the form inputs/click
 $("#submit").on("click", function(event){
 	event.preventDefault();
 
+
+//Form validation 
 function validateForm() {
 	var isValid = true;
 $(".form-control").each(function(){
@@ -22,8 +25,10 @@ $(".browser-default").each(function() {
 return isValid;
 }
 
+//If all required fields are filled 
 if(validateForm()){
 
+//Create an object for the user's data 
 	var userData = {
 		name: $("#name").val().trim(),
 		photo: $("#photo").val().trim(),
@@ -45,10 +50,13 @@ if(validateForm()){
 	var currentURL = window.location.orgin; 
 
 
-// 	//post new friend data, get match data back and insert into modal
+ 	//AJAX post the data, get match data back and insert into modal
 	$.post("/api/friends", userData, function(data){
+		//Most compatible name 
 		$("#matchName").html(data.name);
+		//most compatible photo
 		$("#matchPhoto").attr("src", data.photo);
+		//best match 
 		$("#modalResult").modal("open");
 
 
