@@ -1,12 +1,39 @@
-body{
-	background-color: #FF00FF;
-
+body.home-page{
+	margin: 0 auto;
+	background-image: url('/assets/images/racks.jpg'); 
+	font-family: "Muli", sans-serif;
 }
 
-.jumbotron {
-	background-color: C0C0C0;
+#headerCard { 
+	margin-top: 50px;
+	}
+
+.btn-large {
+	margin: 25px 0;
+}
+
+blockquote { 
+		border-left: 3px solid #FFAB00;
+		font-size: 20px;
+
+		 }
+
+label {
+	margin-top: -35px;
+}
+
+.btn {
+	margin-bottom: 50px;
+}
+
+.btn img {
+	margin: 3px;
+}
+
+#comic-sans {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
 	  }
 
-.footer{
-	font-size: 20px;
-}

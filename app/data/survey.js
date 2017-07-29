@@ -62,14 +62,14 @@ var questions = [
 	        }
 	    }
 	    //create new instance of friend object
-	    var newFriend = {
+	    var userData = {
 	        name: $("#name").val().trim(),
 	        photo: $("#photo").val().trim(),
 	        answers: answers
 	    };
 	    //make url variable that will work when app is used from different location
 	    var currentURL = window.location.origin;
-	    $.post(currentURL + "/api/new", newFriend).done(function(data) {
+	    $.post(currentURL + "/api/new", userData).done(function(data) {
 	        console.log(data);
 	        $("#modal-body").empty();
 	        for (var i = 0; i < data.length; i++) {
@@ -78,7 +78,7 @@ var questions = [
 	            $(".modal-body").append("<img src='" + data[i].photo + "' class='img-thumbnail'>");
 	        }
 	        //make modal visible
-	        $('#matchModal').modal('toggle');
+	        $('#matchModal').modal('open');
 	        //clear all input fields
 	        $("#name").val("");
 	        $("#photo").val("");
